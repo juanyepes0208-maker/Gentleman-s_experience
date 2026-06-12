@@ -1,0 +1,291 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #C9A14A;
+    margin-bottom: 10px;
+    background-color: #1A1A1A;;
+    border-radius: 5px; 
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+}
+
+header a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header a span{
+    color: #F5F5F5;
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+header a img{
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;
+    border-bottom: 4px solid #C9A14A;
+}
+
+.important-title{
+    color: #2b2b2b;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+main video{
+    border-bottom: 1px solid #C9A14A; /* Es una linea decorativa */
+    border-radius: 10px; /* Hace que el contenedor tenga esquinas suaves*/
+    margin-bottom: 10px;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    border: 2px solid #C9A14A;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.section a{
+    padding: 25px;
+    background-color:#C9A14A;
+    font-size: 18px;
+    margin: 18px;
+    border-radius: 5px;
+    display: inline-block; /* Importante para la animacion ya que por defecto son inline lo que permite que no se transformen bien*/
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{ /* Le digo al navegador animame esto con keyframes y yo le doy el nombre*/
+    0%{
+        transform: translateY(0); /* Empieza en su estado inicial que es 0*/
+    }
+    50%{
+        transform: translateY(-6px); /* Sube -6px que es el eje Y*/
+    }
+    100%{
+        transform: translateY(0); /* Vuelve a su estado original*/
+    }
+}
+
+.section a:hover{
+    background-color: #D4B978;
+    color: #000;
+    transition: 0.3s;
+    transform: translateX(10px);
+}
+
+.cut-hairs{
+    background-color: #2B2B2B;
+    margin-bottom: 10px;
+}
+
+.title-cut-hairs{
+    color: #000;
+    border: 1px solid red;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.cut-hairs h2{
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.cut-hairs img{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.barba-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #C9A14A;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container{
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.abilities-card,
+.teach-abilities-card{
+    background-color: white;
+    border-left: 4px solid #C9A14A;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.teach-abilities-card a{
+    color: #C9A14A;
+    border-bottom: 4px solid #1A1A1A;
+    font-size: 17px;
+}
+
+.container{
+    margin: 25px;
+}
+
+.container ul li{
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.abilities-card span{
+    font-size: 20px;
+    color: #A31E24;
+}
+
+.teach-abilities-card span{
+    font-size: 20px;
+    color: #A31E24;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+}
+
+footer .redes-sociales img{
+    max-width: 100px;
+    height: auto;
+    border-radius: 100%;
+    padding: 10px 20px;
+    margin: 20px;
+    filter: grayscale(100%); /* Es como si las imagenes queden a blanco y negro*/
+}
+
+footer .redes-sociales img:hover{
+    filter: grayscale(0%); /* Aqui le quito el blanco y negro para que vuelvan a la normalidad*/
+}
+
+@media (min-width: 1024px){
+    header a span{
+        padding-right: 30px;
+        font-size: 20px;
+    }
+    .important-title{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    main{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .section{
+        background-color: white;
+        border: none;
+    }
+    main .main-video{
+        padding-left: 30px;
+    }
+    main .section a{
+        padding: 30px;
+        font-size: 20px;
+    }
+    .title-cut-hairs{
+        font-size: 18px;
+    }
+    .cut-hairs h2{
+        padding: 20px;
+        font-size: 25px;
+    }
+    .cut-hairs, 
+    .after, 
+    .before{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+    }
+    .barba-video{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .container ul li{
+        font-size: 18px;
+        padding: 12px;
+    }
+    .container{
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    header{
+        margin-bottom: 10px;
+    }
+    header a span{
+        padding-right: 60px;
+        font-size: 25px;
+    }
+    .important-title{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    main video{
+        width: 600px;
+        height: 550px;
+        margin-left: 50px;
+    }
+    main .section a{
+        padding: 40px;
+        margin: 30px;
+        font-size: 22px;
+    }
+    .title-cut-hairs{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .cut-hairs{
+        padding: 20px 80px;
+        margin-bottom: 15px;
+    }
+    .container ul li{
+        font-size: 20px;
+    }
+}
