@@ -191,7 +191,7 @@ footer .redes-sociales img{
     height: auto;
     border-radius: 100%;
     padding: 10px 20px;
-    margin: 20px;
+    margin: 10px;
     filter: grayscale(100%); /* Es como si las imagenes queden a blanco y negro*/
 }
 
