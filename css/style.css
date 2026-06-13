@@ -40,6 +40,17 @@ header a img{
     border-bottom: 4px solid #C9A14A;
 }
 
+.change-language{
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #C9A14A;
+    margin-bottom: 10px;
+}
+
+.change-language a{
+    color: #000;
+}
+
 .important-title{
     color: #2b2b2b;
     text-align: center;
@@ -75,6 +86,7 @@ main video{
 .section a{
     padding: 25px;
     background-color:#C9A14A;
+    color: #F5F5F5;
     font-size: 18px;
     margin: 18px;
     border-radius: 5px;
@@ -204,6 +216,9 @@ footer .redes-sociales img:hover{
         padding-right: 30px;
         font-size: 20px;
     }
+    .change-language{
+        font-size: 18px;
+    }
     .important-title{
         font-size: 16px;
         margin-bottom: 10px;
@@ -262,6 +277,9 @@ footer .redes-sociales img:hover{
     header a span{
         padding-right: 60px;
         font-size: 25px;
+    }
+    .change-language{
+        font-size: 20px;
     }
     .important-title{
         font-size: 18px;
