@@ -192,7 +192,7 @@ main video{
 }
 
 /* --- Sección de Comentarios (Optimizada para Móviles) --- */
-.comments-section {
+.commentsSection {
     background-color: #1A1A1A;
     border: 2px solid #C9A14A;
     border-radius: 8px;
@@ -201,17 +201,17 @@ main video{
     color: #F5F5F5;
 }
 
-.comments-section h2 {
+.commentsSection h2 {
     color: #C9A14A;
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.4rem;
 }
 
-.form-group {
+.formGroup {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 1.3rem;
     margin-bottom: 15px;
 }
 
@@ -220,56 +220,56 @@ main video{
     color: #D4B978;
 }
 
-.form-group input, 
-.form-group textarea {
+.formGroup input, 
+.formGroup textarea {
     padding: 12px; /* Área táctil más cómoda */
     background-color: #2B2B2B;
     border: 1px solid #C9A14A;
     border-radius: 6px;
     color: #F5F5F5;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px; /* Evita zoom molesto en inputs de iOS */
-    width: 100%;
-    resize: vertical;
+    font-size: 16px; /* It avois an annoying zoom in iOS inputs */
 }
 
-.form-group input:focus, 
-.form-group textarea:focus {
+.formGroup input:focus, 
+.formGroup textarea:focus {
     outline: none;
     border-color: #F5F5F5;
 }
 
-#submit-comment-btn {
+#submitCommentBtn {
     background-color: #C9A14A;
     color: #1A1A1A;
-    border: none;
+    border: none; /* It deletes the color and the border at the same time*/
     padding: 14px;
     width: 100%;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 600; /* It is the same that bold */
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-#submit-comment-btn:hover {
+#submitCommentBtn:hover {
     background-color: #D4B978;
     color: #000;
 }
 
-/* --- Contenedor Dinámico --- */
-.comments-container {
+/* --- Opinions container --- */
+.commentsContainer {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-height: 350px; /* Limita el alto en pantallas pequeñas */
-    overflow-y: auto;
+    max-height: 350px; /* IIt is useful to images, videos, main containers, what in big screens does not be difficult read
+    and for forms and modals */
+    overflow-y: auto; /* It will create a vertical scroll bar, if the comment is big, the user can read it
+    below*/
     padding-right: 5px;
 }
 
 /* Tarjeta individual que creará JS */
-.comment-card {
+.commentCard {
     background-color: #2B2B2B;
     border-left: 4px solid #C9A14A;
     padding: 15px;
@@ -277,22 +277,24 @@ main video{
     animation: fadeIn 0.5s ease-in-out;
 }
 
-.comment-card h3 {
+.commentCard h3 {
     font-size: 15px;
     color: #C9A14A;
     margin-bottom: 5px;
 }
 
-.comment-card p {
+.commentCard p {
     font-size: 14px;
     color: #F5F5F5;
     line-height: 1.4;
-    word-break: break-word;
+    word-break: break-word; /* Or overflow-wrap: break-word, if a text is long, it will be at the same
+    level of the container*/
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes fadeIn { /* Fade in is an animation what the comment does not appear suddenly*/
+    from { opacity: 0; transform: translateY(10px); } /* It starts with opacity 0 what is invisaible, when it will appear
+    pushing the comment 10 px to up*/
+    to { opacity: 1; transform: translateY(0); } /* Here the comment is visible and comes to its original position*/
 }
 
 footer{
@@ -374,15 +376,15 @@ footer .redes-sociales img:hover{
     }
     
     /* Adaptación de Comentarios para Laptops/Tabletas */
-    .comments-section {
+    .commentscection {
         max-width: 650px;
         padding: 30px;
         margin: 30px auto;
     }
-    .comments-section h2 {
+    .commentssection h2 {
         font-size: 1.7rem;
     }
-    .comments-container {
+    .commentsContainer {
         max-height: 450px; /* Más espacio para leer en pantallas grandes */
     }
 }
@@ -425,11 +427,11 @@ footer .redes-sociales img:hover{
     }
     
     /* Adaptación de Comentarios para Pantallas de Escritorio Grandes */
-    .comments-section {
+    .commentsSection {
         max-width: 750px;
         margin: 40px auto;
     }
-    .comments-section h2 {
+    .commentsSection h2 {
         font-size: 1.9rem;
     }
 }
